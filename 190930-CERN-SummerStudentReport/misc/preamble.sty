@@ -1,0 +1,71 @@
+\ProvidesPackage{preamble}  % used to import package properly
+
+% Page layout
+\usepackage[margin=0.7in]{geometry}  % used to fix the page layout
+\usepackage[document]{ragged2e}  % used to justify text
+\usepackage{lscape}  % used for landscape mode
+
+% Standard to have / unknown function
+\usepackage{amsthm}
+\usepackage{commath}
+\usepackage{float}  % used for fixed tables with [H] (or t, h, b, ..)
+\restylefloat{table} 
+
+\usepackage{amssymb}  % used to have a black square at the end of a proof 
+\usepackage{amsmath,parskip}  % used to help fixing page layout
+\usepackage[demo]{graphicx}
+\usepackage[utf8]{inputenc}  % coding format (standard)
+\usepackage[english]{babel}  % language selection (standard)
+\usepackage{enumerate}  % used for the enumerate environment of itemizingg
+\usepackage{cite}  % used for citaions
+\usepackage{amssymb}
+\usepackage{epstopdf}  % used for pdf exporting
+
+% Tables config
+\usepackage{multirow} %for merging cells in tables
+\floatstyle{plaintop}  % used to place table caption on top
+
+% Figure config
+\usepackage{wrapfig}
+\usepackage{subfig}  % used for subfigs in figures
+\usepackage[justification=centering]{caption}  % used to center captions, can optionally pass: raggedleft, ragged right
+\usepackage{array}% ht$T_p$ $[s]$://ctan.org/pkg/array	
+
+% Table of contests config
+\usepackage{titlesec}
+\usepackage[titletoc,toc,title]{appendix} %used for apendix
+\usepackage[nottoc]{tocbibind}
+
+% Equation config
+\numberwithin{equation}{section} %used to number equations per sections
+
+% Project config
+\usepackage{subfiles}  % used to import files and have a nice project structure
+
+% Format Page style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Header
+\rhead{REANA}
+\lhead{CERN}
+% Footer
+\lfoot{\today}
+\cfoot{Page \thepage}
+\rfoot{Summer Student Programme}
+% Add lines after header and before footer
+\renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+% Used for code insertions
+\usepackage{listings}
+
+\usepackage{hyperref} %Used to hyper reference.Usually it has to be the last package to be imported, but there might be some exceptions to this rule.
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=red,
+}
